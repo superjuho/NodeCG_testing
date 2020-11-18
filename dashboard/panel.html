@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <form id="update-overlay">
+      <label for="overlay-text">Overlay Text</label>
+      <input id="overlay-text" />
+      <button type="submit">Ubpdate</button>
+    </form>
+    <script>
+      const textReplicant = nodecg.Replicant("textReplicant");
+      const textForm = document.getElementById("update-overlay");
+      const textBox = document.getElementById("overlay-text");
+      textReplicant.on("change", (value) => {
+        document.getElementById("overlay-text").value = value;
+      });
+      textForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        textReplicant.value = textBox.value;
+      });
+    </script>
+  </body>
+</html>
