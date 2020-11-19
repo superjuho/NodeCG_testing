@@ -5,16 +5,16 @@
   </head>
   <body>
     <form id="update-overlay">
-      <label for="overlay-text">Overlay Text</label>
-      <input id="overlay-text" />
-      <button type="submit">Ubpdate</button>
+      <label for="twitchAccount">Twitch Account</label>
+      <input id="twitchAccount" />
+      <button type="twitchAccount">Update</button>
     </form>
     <script>
       const textReplicant = nodecg.Replicant("textReplicant");
       const textForm = document.getElementById("update-overlay");
-      const textBox = document.getElementById("overlay-text");
+      const textBox = document.getElementById("twitchAccount");
       textReplicant.on("change", (value) => {
-        document.getElementById("overlay-text").value = value;
+        document.getElementById("twitchAccount").value = value;
       });
       textForm.addEventListener("submit", (e) => {
         e.preventDefault();
