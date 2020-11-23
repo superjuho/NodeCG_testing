@@ -4,22 +4,14 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-    <form id="update-overlay">
-      <label for="twitchAccount">Twitch Account</label>
-      <input id="twitchAccount" />
-      <button type="twitchAccount">Update</button>
-    </form>
-    <script>
-      const textReplicant = nodecg.Replicant("textReplicant");
-      const textForm = document.getElementById("update-overlay");
-      const textBox = document.getElementById("twitchAccount");
-      textReplicant.on("change", (value) => {
-        document.getElementById("twitchAccount").value = value;
-      });
-      textForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        textReplicant.value = textBox.value;
-      });
-    </script>
+	<span>Name</span>
+	<input type="text" id="name">
+	<br>
+	<span>Information</span>
+	<input type="text" id="information">
+
+	<button onclick="update()">Update</button>
+
+	<script src="panel.js"></script>
   </body>
 </html>

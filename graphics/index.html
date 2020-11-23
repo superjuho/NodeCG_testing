@@ -5,16 +5,18 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	   <div class="socialMedias">
-		   <h3 id="twitchAccount">
-			   My Name Is
-		   </h3>
+	   <div class="lowThird">
+		   <div id="colorBlock"></div>
+		   <div class="textContainer">
+		   <div id="name">
+			   First Lastname
+		   </div>
+		   <div id="information">
+			   Metropolia University of Applied Siences
+		   </div>
+		</div>
 	   </div>
-	<script>
-		const textReplicant = nodecg.Replicant('textReplicant');
-		textReplicant.on('change', value => {
-			document.getElementById('twitchAccount').innerHTML = value;
-		});
+	<script src="index.js">
 	</script>
 </body>
 </html>
