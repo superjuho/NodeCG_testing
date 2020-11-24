@@ -13,9 +13,9 @@ nodecg.listenFor('showLowerthird', (data) =>{
 
 	const tl = gsap.timeline();
 	tl.from([ lowThird, colorBlc, textContainer], 1, {width: 0});
-	tl.from([ nameElement, informationElement], 1, { width: 0 });
-	tl.to([ nameElement, informationElement ], 1, { width: 0 }, "+=4");
-	tl.to([ lowThird, colorBlc, textContainer], 1, {width: 0 }, "+=4");
+	tl.from([ nameElement, informationElement], 1, { width: 0 , opacity: 0});
+	tl.to([ nameElement, informationElement ], 1, { width: 0, opacity: 0}, "+=3");
+	tl.to([ lowThird, colorBlc, textContainer], 1, {width: 0 }, "+=1");
 
 
 	tl.call(() => {
@@ -25,5 +25,6 @@ nodecg.listenFor('showLowerthird', (data) =>{
 	})
 
 	tl.set([lowThird, colorBlc, textContainer, informationElement, nameElement], {width: ""})
+	tl.set([nameElement, informationElement], {opacity: 1})
 
 })
