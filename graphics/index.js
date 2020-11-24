@@ -7,21 +7,23 @@ const colorBlc = document.getElementById('colorBlock');
 const textContainer = document.getElementById('textContainer');
 
 nodecg.listenFor('showLowerthird', (data) =>{
-	nameElement.innerHTML = data.name;
+	lowThird.style["opacity"] = "1";
+ 	nameElement.innerHTML = data.name;
 	informationElement.innerHTML = data.information;
 
 	const tl = gsap.timeline();
-	tl.from([ lowThird, colorBlc, textContainer], 1, {width: 0, opacity: 1});
-	tl.from([ nameElement, informationElement], 1, { opacity: 0 });
-	tl.to([ nameElement, informationElement ], 1, { opacity: 1 });
-	tl.to([ lowThird, colorBlc, textContainer], 1, {width: 0, opacity: 1 });
+	tl.from([ lowThird, colorBlc, textContainer], 1, {width: 0});
+	tl.from([ nameElement, informationElement], 1, { width: 0 });
+	tl.to([ nameElement, informationElement ], 1, { width: 0 }, "+=4");
+	tl.to([ lowThird, colorBlc, textContainer], 1, {width: 0 }, "+=4");
 
 
 	tl.call(() => {
 		nameElement.innerHTML = "";
 		informationElement.innerHTML = "";
+		lowThird.style["opacity"] = "0";
 	})
 
-	tl.set([textContainer, lowThird, colorBlc, nameElement, informationElement], {width:""})
+	tl.set([lowThird, colorBlc, textContainer, informationElement, nameElement], {width: ""})
 
 })
