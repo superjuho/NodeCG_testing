@@ -12,7 +12,7 @@ nodecg.listenFor('showLowerthird', (data) =>{
 	informationElement.innerHTML = data.information;
 
 	const tl = gsap.timeline();
-	tl.from([ lowThird, colorBlc, textContainer], 1, {width: 0});
+	tl.from([ lowThird, colorBlc, textContainer], 1, {width: 0 });
 	tl.from([ nameElement, informationElement], 1, { width: 0 , opacity: 0});
 	tl.to([ nameElement, informationElement ], 1, { width: 0, opacity: 0}, "+=3");
 	tl.to([ lowThird, colorBlc, textContainer], 1, {width: 0 });
