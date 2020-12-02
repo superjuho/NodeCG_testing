@@ -15,7 +15,7 @@ nodecg.listenFor('showLowerthird', (data) =>{
 	tl.from([ lowThird, colorBlc, textContainer], 1, {width: 0});
 	tl.from([ nameElement, informationElement], 1, { width: 0 , opacity: 0});
 	tl.to([ nameElement, informationElement ], 1, { width: 0, opacity: 0}, "+=3");
-	tl.to([ lowThird, colorBlc, textContainer], 1, {width: 0 }, "+=1");
+	tl.to([ lowThird, colorBlc, textContainer], 1, {width: 0 });
 
 
 	tl.call(() => {

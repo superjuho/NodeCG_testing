@@ -9,7 +9,7 @@
 	width: 660px;
 	height: 80px;
 	background-color: white;
-	border: 2px solid black;
+	border: 3px solid black;
 	bottom: 120px;
 	left: 140px;
 	margin: 0;
@@ -26,7 +26,7 @@
 }*/
 
 #colorBlock {
-	background-color: maroon;
+	background-color: #50ab90;
 	width: 80px;
 	height: 80px;
 	margin-right: 20px;
@@ -51,6 +51,8 @@
 
 
 #name {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: bold;
 	font-size: 32px;
 	white-space: nowrap;
 	/*animation-name: textAnim;
@@ -60,6 +62,7 @@
 #information {
 	font-size: 24px;
 	white-space: nowrap;
+	font-family: Arial, Helvetica, sans-serif;
 	/*animation-name: textAnim;
 	animation-duration: 3s;*/
 }
